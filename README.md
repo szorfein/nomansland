@@ -14,23 +14,27 @@ And install
 By distrib:
 
 ```rb
-require 'Nomansland'
+require 'nomansland'
 
-puts "Running Fedora" if Nomansland::distro? == :fedora
-puts "Running Gentoo" if Nomansland::distro? == :gentoo
+case Nomansland::distro?
+when :fedora
+  puts 'Running Fedora'
+when :gentoo
+  puts 'Running Gentoo'
+end
 ```
 
 Sometimes, it is better to search by installer:
 
 ```rb
-require 'Nomansland'
+require 'nomansland'
 
 case Nomansland::installer?
-  when :yum
-    system("sudo yum install tor")
-  when :apt_get
-    system("sudo apt-get install tor")
-  when :pacman
-    system("sudo pacman -S tor")
+when :yum
+  system('sudo yum install tor')
+when :apt_get
+  system('sudo apt-get install tor')
+when :pacman
+  system('sudo pacman -S tor')
 end
 ```
