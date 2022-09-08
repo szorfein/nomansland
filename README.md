@@ -38,3 +38,18 @@ when :pacman
   system('sudo pacman -S tor')
 end
 ```
+
+Or by init system:
+
+```rb
+require 'nomansland'
+
+case Nomansland::init?
+when :runit # Voidlinux
+  system('sv restart tor')
+when :systemd
+  system('systemctl restart tor')
+when :openrc # default for Gentoo
+  system('/etc/init.d/tor start')
+end
+```

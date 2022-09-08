@@ -8,12 +8,12 @@ Gem::Specification.new do |s|
     "wiki_uri" => "https://github.com/szorfein/nomansland"
   }
 
-  s.version = "0.0.3"
+  s.version = "0.0.4"
   s.platform = Gem::Platform::RUBY
   s.author = ['szorfein']
   s.homepage = 'https://github.com/szorfein/nomansland'
   s.email = 'szorfein@protonmail.com'
-  s.required_ruby_version = '>=2.4'
+  s.required_ruby_version = '>=2.5'
   s.files = `git ls-files`.split(" ")
   s.files.reject! { |fn| fn.include? "certs" }
   s.files.reject! { |fn| fn.include? "Makefile" }
