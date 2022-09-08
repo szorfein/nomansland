@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
     "wiki_uri" => "https://github.com/szorfein/nomansland"
   }
 
-  s.version = "0.0.4"
+  s.version = "0.0.5"
   s.platform = Gem::Platform::RUBY
   s.author = ['szorfein']
   s.homepage = 'https://github.com/szorfein/nomansland'
